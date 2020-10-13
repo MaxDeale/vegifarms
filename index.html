@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/af356b6923.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>VegiFarms LLC</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="navbar">
+      <div class="navbar-left">
+        <img class="leaf1" src="/img/leaf1.png" alt="noleaf" />
+        <h4 id="logo">Vegifarms LLC</h4>
+      </div>
+
+      <div class="navbar-right">
+        <ul>
+          <li class="navlink current"><a href="#">Home</a></li>
+          <li class="navlink"><a href="#about">About</a></li>
+          <li class="navlink"><a href="#services">Services</a></li>
+          <li class="navlink"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+
+    <section id="header">
+      <h1>Our Integrity Is In The Soil.</h1>
+      <p class="lead">We provide fresh farm products for fresh people</p>
+
+      <img class="leaf2" src="/img/leaf2.png" alt="noleaf" />
+      <button id="quote-button">Request Quotation</button>
+      <div class="header-pics">
+        <img src="/img/pic1.png" alt="nopics" />
+        <img src="/img/pic2.png" alt="nopics" />
+        <img src="/img/pic3.png" alt="nopics" />
+        <img src="/img/pic4.jpg" alt="nopics" />
+        <!-- <img src="/img/pic1.png" alt="nopics" /> -->
+      </div>
+    </section>
+
+    <!-- About Section  -->
+
+    <section id="about">
+      <h1 class="section-title underline-effect">About</h1>
+
+      <p>
+        We are dedicated to meeting the farm insurance needs of today's farmer
+        via a national network of selected agricultural insurance intermediaries
+        who will represent your best interests and provide a high level of local
+        service, not only in terms of arranging your farm insurance policy but
+        dealing with claims on your behalf.
+      </p>
+
+      <div class="about-box">
+        <div class="about-menu">
+          <ul>
+            <li>Staff <i class="fas fa-people-arrows"></i></li>
+            <li>Location <i class="fas fa-sign"></i></li>
+            <li>Clients <i class="fas fa-dollar-sign"></i></li>
+          </ul>
+        </div>
+        <div class="about-content">
+          <div id="staff-content">
+            <div class="staff-pics">
+              <div>
+                <img src="/img/staff1.png" alt="nostaff" />
+                <h2>Hembers Farmtooth</h2>
+                <h6>Head Apple Grower</h6>
+              </div>
+              <div>
+                <img src="/img/staff2.png" alt="nostaff" />
+                <h2>Lars Eyehawk</h2>
+                <h6>Cattle Prodder</h6>
+              </div>
+              <div>
+                <img src="/img/staff3.png" alt="nostaff" />
+                <h2>Chuck Wineman</h2>
+                <h6>Head Grape Grower</h6>
+              </div>
+            </div>
+            <div class="staff-info">
+              <p>
+                Our staff are committed to providing your with the greatest
+                farming expereince possible with over 58 years of experience
+                each, you will never be dissappointed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section id="services">
+      <h1 class="section-title underline-effect">Services</h1>
+      <div class="bubbles-container">
+        <div class="bubble">
+          <h2>Farming <span>.</span></h2>
+          <i class="fas fa-truck-moving fa-3x"></i>
+        </div>
+        <div class="bubble">
+          <h2>Ploughing <span>.</span></h2>
+          <i class="fas fa-spa fa-3x"></i>
+        </div>
+        <div class="bubble">
+          <h2>Mowing <span>.</span></h2>
+          <i class="fas fa-cut fa-3x"></i>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let navLinks = document.querySelectorAll(".navlink");
+      console.log(navLinks);
+      navLinks.forEach((navlink) => {
+        navlink.addEventListener("click", function (e) {
+          let currentElement = e.target.parentElement;
+          console.log(currentElement);
+          currentElement.classList.add("current");
+          setTimeout(() => {
+            let selected = document.querySelectorAll(".current");
+            selected.forEach((s) => {
+              s.classList.remove("current");
+            });
+          }, 10000);
+        });
+      });
+    </script>
+  </body>
+</html>
